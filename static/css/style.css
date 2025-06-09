@@ -18,9 +18,11 @@ p {
 }
 
 .card {
-  border: none;               /* remove default border */
-  border-radius: 12px;        /* slightly more rounded */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  border-radius: 12px;      
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
 }
 /* Replace the solid primary button with a gradient */
 .btn-primary {
