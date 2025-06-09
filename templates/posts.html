@@ -1,0 +1,24 @@
+{# templates/posts.html #}
+{% extends "base.html" %}
+
+{% block title %}Latest Posts – My Flask Site{% endblock %}
+
+{% block content %}
+  <div class="container my-5">
+    <h1 class="mb-4">Latest Posts</h1>
+
+    <ul class="list-group">
+      {# Loop through a “posts” list provided by your view #}
+      {% for post in posts %}
+        <li class="list-group-item">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.body }}</p>
+        </li>
+      {% else %}
+        <li class="list-group-item text-muted">
+          No posts to display yet. Check back soon!
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
