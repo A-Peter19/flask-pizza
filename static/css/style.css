@@ -11,7 +11,7 @@ h1, h2, h3, .display-4 {
 }
 a {
     text-decoration: none;
-    color: #2980b9;
+    color: var(--bs-primary);
 }
 p {
   line-height: 1.6;
@@ -26,11 +26,11 @@ p {
 }
 /* Replace the solid primary button with a gradient */
 .btn-primary {
-  background: linear-gradient(45deg, #1a73e8, #0069e0);
+  background: linear-gradient(45deg, var(--bs-primary), #0069e0);
   border: none;
 }
 .btn-primary:hover {
-  background: linear-gradient(45deg, #0069e0, #1a73e8);
+  background: linear-gradient(45deg, #0069e0, var(--bs-primary));
 }
 
 .btn {
