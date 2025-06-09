@@ -42,4 +42,10 @@ p {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Thin gradient divider above the footer */
+.footer-divider {
+  height: 4px;
+  background: linear-gradient(to right, var(--bs-primary), var(--bs-secondary));
+}
+
 
