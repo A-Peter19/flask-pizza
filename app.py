@@ -27,7 +27,7 @@ def posts():
         {'title': 'Another update', 'body': 'More content here.'}
     ]
     # This renders a template that shows your posts.
-    return render_template('posts.html')
+    return render_template('posts.html', posts=sample_posts)
 
 @app.route('/submit', methods=['POST'])
 def submit():
