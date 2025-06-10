@@ -7,18 +7,21 @@
   <div class="container py-5">
     <h1 class="mb-4">Latest Posts</h1>
 
-    <ul class="list-group">
-      {# Loop through a “posts” list provided by your view #}
+    <div class="row row-cols-1 row-cols-md-2 g-4">
       {% for post in posts %}
-        <li class="list-group-item">
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.body }}</p>
-        </li>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.body }}</p>
+            </div>
+          </div>
+        </div>
       {% else %}
-        <li class="list-group-item text-muted">
+        <div class="col-12 text-center text-muted">
           No posts to display yet. Check back soon!
-        </li>
+        </div>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 {% endblock %}
