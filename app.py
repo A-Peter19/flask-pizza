@@ -40,9 +40,9 @@ def submit():
     # otherwise show thank you page.
     return render_template('thankyou.html', name=username)
 
-@app.context_processor
+""" @app.context_processor
 def inject_current_year():
-    return {'current_year': datetime.gmtnow().year}
+    return {'current_year': datetime.utcnow().year} """
 
 if __name__ == '__main__':
     app.run(debug=True)
