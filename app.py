@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -39,6 +40,9 @@ def submit():
     # otherwise show thank you page.
     return render_template('thankyou.html', name=username)
 
+@app.context_processor
+def inject_current_year():
+    return {'current_year': datetime.gmtnow().year}
 
 if __name__ == '__main__':
     app.run(debug=True)
