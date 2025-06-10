@@ -44,8 +44,10 @@ p {
 
 /* Thin gradient divider above the footer */
 .footer-divider {
+  width: 100%;
   height: 4px;
   background: linear-gradient(to right, var(--bs-primary), var(--bs-secondary));
+  margin: 2rem0;
 }
 
 
