@@ -23,8 +23,8 @@ def form():
 @app.route('/posts')
 def posts():
     sample_posts = [
-        {'title': 'Hello Flask!', 'body': 'This is my first post.'},
-        {'title': 'Another update', 'body': 'More content here.'}
+        {'title': 'Day 1!', 'body': 'This is my first post.'},
+        {'title': 'Another update', 'body': 'More content coming.'}
     ]
     # This renders a template that shows your posts.
     return render_template('posts.html', posts=sample_posts)
