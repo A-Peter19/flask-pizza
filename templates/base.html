@@ -66,20 +66,20 @@
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item mx-1">
-            <a class="btn btn-primary rounded-pill px-4{% if request.endpoint=='index' %} active{% endif %}"
-               href="{{ url_for('index') }}" role="button">Home</a>
+            <a class="nav-link{% if request.endpoint=='index' %} active fw-bold{% endif %}"
+               href="{{ url_for('index') }}">Home</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="btn btn-primary rounded-pill px-4{% if request.endpoint=='about' %} active{% endif %}"
-               href="{{ url_for('about') }}" role="button">About</a>
+            <a class="nav-link{% if request.endpoint=='about' %} active fw-bold{% endif %}"
+               href="{{ url_for('about') }}">About</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="btn btn-primary rounded-pill px-4{% if request.endpoint=='posts' %} active{% endif %}"
-               href="{{ url_for('posts') }}" role="button">Posts</a>
+            <a class="nav-link{% if request.endpoint=='posts' %} active fw-bold{% endif %}"
+               href="{{ url_for('posts') }}">Posts</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="btn btn-primary rounded-pill px-4{% if request.endpoint=='user' %} active{% endif %}"
-               href="{{ url_for('user', name='Guest') }}" role="button">Greet Guest</a>
+            <a class="nav-link{% if request.endpoint=='user' %} active fw-bold{% endif %}"
+               href="{{ url_for('user', name='Guest') }}">Greet Guest</a>
           </li>
         </ul>
       </div>
