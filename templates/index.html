@@ -2,12 +2,13 @@
 {% block title %}Home – My New Site {% endblock %}
 
 {% block content %}
-  <!-- Button Above Hero Section -->
-  <div class="container d-flex justify-content-center align-items-center" style="min-height: 90px;">
-    <a href="{{ url_for('posts') }}" class="btn btn-primary btn-lg rounded-pill shadow px-5 my-2">
+  <!-- Large Button at Top -->
+  <div class="container d-flex justify-content-center align-items-center my-5" style="min-height: 160px;">
+    <a href="{{ url_for('posts') }}" class="btn btn-primary btn-lg rounded-pill shadow px-5 py-4" style="font-size: 2rem;">
       <i class="bi bi-arrow-right-circle me-2"></i>View Latest Posts
     </a>
   </div>
+
   <!-- Hero Section -->
   <div class="container">
     <section class="py-5 text-white" style="background-color: var(--bs-primary); border-radius: 2rem; padding: 2.5rem 2rem;">
