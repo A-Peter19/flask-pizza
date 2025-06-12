@@ -52,16 +52,68 @@
   </style>
 </head>
 <body>
-  <!-- Minimal Navbar -->
-  <nav class="d-flex justify-content-between align-items-center px-4 py-3" style="background: none; box-shadow: none;">
-    <div>
-      <span style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2rem; letter-spacing: -2px;">△</span>
-    </div>
-    <div>
-      <a href="/" class="text-dark text-decoration-none mx-3" style="font-family: 'Inter', sans-serif; font-size: 1.1rem;">Work</a>
-      <a href="/about" class="text-dark text-decoration-none mx-3" style="font-family: 'Inter', sans-serif; font-size: 1.1rem;">About</a>
+  <!-- Navbar with logo -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" style="background-color: rgba(255,255,255,0.95);">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
+        <img
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="Site Logo"
+          height="40"
+          class="d-inline-block align-top me-2 rounded-circle"
+        >
+        <span>My Flask Site</span>
+      </a>
+      <div class="d-flex align-items-center ms-auto">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <span id="darkModeToggle" onclick="toggleDarkMode()" style="cursor:pointer; font-size: 1.5rem; user-select: none; margin-left: 1.5rem;">🌙</span>
+      </div>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='index' %} active fw-bold{% endif %}"
+               href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='about' %} active fw-bold{% endif %}"
+               href="{{ url_for('about') }}">About</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='projects' %} active fw-bold{% endif %}"
+               href="{{ url_for('projects') }}">Projects</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='blog' %} active fw-bold{% endif %}"
+               href="{{ url_for('blog') }}">Blog</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='gallery' %} active fw-bold{% endif %}"
+               href="{{ url_for('gallery') }}">Gallery</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='achievements' %} active fw-bold{% endif %}"
+               href="{{ url_for('achievements') }}">Achievements</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='contact' %} active fw-bold{% endif %}"
+               href="{{ url_for('contact') }}">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
+
+  <!-- Main content area -->
   <main class="container" style="margin-top: 0 !important;">
     {% block content %}{% endblock %}
   </main>
