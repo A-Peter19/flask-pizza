@@ -50,4 +50,8 @@ p {
   margin: 2rem 0;
 }
 
+.navbar-nav {
+  flex-direction: row !important;
+}
+
 
