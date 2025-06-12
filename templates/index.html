@@ -7,7 +7,9 @@
     <div class="container text-center">
       <h1 class="display-4 fw-bold">Welcome to My Flask Site</h1>
       <p class="lead">A clean, responsive website built with Flask and Bootstrap.</p>
-      <a href="{{ url_for('posts') }}" class="btn btn-light btn-lg mt-3">View Latest Posts</a>
+      <a href="{{ url_for('posts') }}" class="btn btn-light btn-lg rounded-pill shadow px-5 mt-3">
+        <i class="bi bi-arrow-right-circle me-2"></i>View Latest Posts
+      </a>
     </div>
   </section>
 
