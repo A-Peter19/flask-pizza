@@ -1,58 +1,60 @@
 {% extends "base.html" %}
-{% block title %}Home – My New Site {% endblock %}
+{% block title %}Home – Peter's Portfolio{% endblock %}
 
 {% block content %}
-  <!-- Features Section -->
-<section class="container py-5">
-  <h2 class="text-center mb-4">Our Core Features</h2>
-  <div class="row g-4">
-    <!-- Card 1 -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm rounded">
-        <div class="card-body text-center">
-          <div class="mb-3">
-            <i class="bi bi-speedometer2 display-4 text-primary"></i>
+<div class="container py-5 d-flex flex-column align-items-center justify-content-center" style="min-height: 80vh;">
+  <!-- Hero Card -->
+  <div class="bg-white shadow rounded-4 p-5 mb-5 w-100" style="max-width: 800px;">
+    <h1 class="display-4 fw-bold text-center mb-3" style="font-size:2.8rem;">Hi, I'm Peter</h1>
+    <h2 class="h4 text-center mb-3 fw-normal">Computer Science student & aspiring software engineer</h2>
+    <p class="lead text-center mb-4">I build web apps, explore machine learning, and enjoy solving real-world problems through code.</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="{{ url_for('projects') }}" class="btn btn-outline-dark btn-lg px-4">View My Projects</a>
+      <a href="#" class="btn btn-outline-dark btn-lg px-4">Download CV</a>
+    </div>
+  </div>
+
+  <!-- About Me -->
+  <div class="w-100 mb-5" style="max-width: 900px;">
+    <h2 class="fw-bold mb-2" style="font-size:2rem;">About Me</h2>
+    <p class="fs-5 mb-1">I'm currently studying Computer Science at University, with an interest in backend development, AI, and open source. I am looking for opportunities to create impactful software solutions.</p>
+    <a href="{{ url_for('about') }}" class="text-decoration-underline fs-6">about</a>
+  </div>
+
+  <!-- Highlight Projects -->
+  <div class="w-100 mb-5" style="max-width: 900px;">
+    <h2 class="fw-bold mb-4" style="font-size:2rem;">Highlight Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm rounded-4 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Project One</h5>
+            <p class="card-text">A web application for managing tasks.</p>
+            <a href="#" class="text-decoration-underline">View more ~</a>
           </div>
-          <h5 class="card-title">Fast Performance</h5>
-          <p class="card-text">Our site loads in under 1 second, optimized for speed.</p>
         </div>
       </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm rounded">
-        <div class="card-body text-center">
-          <div class="mb-3">
-            <i class="bi bi-shield-lock display-4 text-primary"></i>
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm rounded-4 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Project Two</h5>
+            <p class="card-text">Machine learning model for predicting trends</p>
+            <a href="#" class="text-decoration-underline">View more ~</a>
           </div>
-          <h5 class="card-title">Secure</h5>
-          <p class="card-text">We follow best practices to keep your data safe.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm rounded">
-        <div class="card-body text-center">
-          <div class="mb-3">
-            <i class="bi bi-phone display-4 text-primary"></i>
-          </div>
-          <h5 class="card-title">Mobile Friendly</h5>
-          <p class="card-text">Our responsive design works on every device.</p>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-
-  <!-- Main Content Below Hero -->
-  <div class="container py-5">
-    <h2 class="mb-4">Featured Content</h2>
-    <p>
-      This is some introductory text below the hero. You can use a white background here and let the hero stand out in your primary color.
-    </p>
+  <!-- Skills -->
+  <div class="w-100 mb-3" style="max-width: 900px;">
+    <h2 class="fw-bold mb-3" style="font-size:2rem;">Skills</h2>
+    <div class="d-flex flex-wrap align-items-center gap-4 fs-1">
+      <span><i class="bi bi-filetype-py"></i> python</span>
+      <span><i class="bi bi-filetype-js"></i> JS</span>
+      <span><i class="bi bi-flask"></i> Flask</span>
+      <span><i class="bi bi-git"></i> git</span>
+    </div>
   </div>
+</div>
 {% endblock %}
