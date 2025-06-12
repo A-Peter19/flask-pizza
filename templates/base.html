@@ -52,55 +52,35 @@
   </style>
 </head>
 <body style="margin:0; padding:0;">
-  <!-- Dark Mode Toggle in Top Right Corner -->
-  <span id="darkModeToggle" onclick="toggleDarkMode()" style="position: fixed; top: 1rem; right: 2rem; z-index: 1050; cursor:pointer; font-size: 1.5rem; user-select: none;">🌙</span>
-  <!-- Navbar with logo -->
-  <div class="logo-bar d-flex align-items-center" style="background-color: #f3f4f6; padding: 0.5rem 1.5rem 0.5rem 0.5rem;">
-    <a class="navbar-brand d-flex align-items-center p-0 m-0" href="{{ url_for('index') }}" style="height: 40px;">
-      <img
-        src="{{ url_for('static', filename='images/logo.png') }}"
-        alt="Site Logo"
-        height="40"
-        class="d-inline-block align-top rounded-circle"
-      >
+  <div class="navbar-bar d-flex align-items-center justify-content-between" style="background: #f3f4f6; padding: 0 2rem; height: 56px;">
+    <a href="{{ url_for('index') }}" class="navbar-brand p-0 m-0" style="height: 40px;">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Site Logo" height="40" class="d-inline-block align-top rounded-circle">
     </a>
+    <ul class="navbar-nav d-flex flex-row align-items-center mb-0" style="gap: 0.5rem;">
+      <li class="nav-item mx-1">
+        <a class="nav-link{% if request.endpoint=='index' %} active fw-bold{% endif %}" href="{{ url_for('index') }}">Home</a>
+      </li>
+      <li class="nav-item mx-1">
+        <a class="nav-link{% if request.endpoint=='about' %} active fw-bold{% endif %}" href="{{ url_for('about') }}">About</a>
+      </li>
+      <li class="nav-item mx-1">
+        <a class="nav-link{% if request.endpoint=='projects' %} active fw-bold{% endif %}" href="{{ url_for('projects') }}">Projects</a>
+      </li>
+      <li class="nav-item mx-1">
+        <a class="nav-link{% if request.endpoint=='blog' %} active fw-bold{% endif %}" href="{{ url_for('blog') }}">Blog</a>
+      </li>
+      <li class="nav-item mx-1">
+        <a class="nav-link{% if request.endpoint=='gallery' %} active fw-bold{% endif %}" href="{{ url_for('gallery') }}">Gallery</a>
+      </li>
+      <li class="nav-item mx-1">
+        <a class="nav-link{% if request.endpoint=='achievements' %} active fw-bold{% endif %}" href="{{ url_for('achievements') }}">Achievements</a>
+      </li>
+      <li class="nav-item mx-1">
+        <a class="nav-link{% if request.endpoint=='contact' %} active fw-bold{% endif %}" href="{{ url_for('contact') }}">Contact</a>
+      </li>
+    </ul>
+    <span id="darkModeToggle" onclick="toggleDarkMode()" style="cursor:pointer; font-size: 1.5rem; user-select: none;">��</span>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #f3f4f6; margin-top: 0; padding-top: 0;">
-    <div class="container-fluid p-0">
-      <div class="collapse navbar-collapse show" id="mainNavbar" style="flex-grow:1;">
-        <ul class="navbar-nav ms-0 mb-2 mb-lg-0 d-flex flex-row align-items-center" style="width:100%;">
-          <li class="nav-item mx-1">
-            <a class="nav-link{% if request.endpoint=='index' %} active fw-bold{% endif %}"
-               href="{{ url_for('index') }}">Home</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link{% if request.endpoint=='about' %} active fw-bold{% endif %}"
-               href="{{ url_for('about') }}">About</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link{% if request.endpoint=='projects' %} active fw-bold{% endif %}"
-               href="{{ url_for('projects') }}">Projects</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link{% if request.endpoint=='blog' %} active fw-bold{% endif %}"
-               href="{{ url_for('blog') }}">Blog</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link{% if request.endpoint=='gallery' %} active fw-bold{% endif %}"
-               href="{{ url_for('gallery') }}">Gallery</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link{% if request.endpoint=='achievements' %} active fw-bold{% endif %}"
-               href="{{ url_for('achievements') }}">Achievements</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link{% if request.endpoint=='contact' %} active fw-bold{% endif %}"
-               href="{{ url_for('contact') }}">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
   <!-- Main content area -->
   <main class="container" style="margin-top: 0 !important; padding-left: 2.5rem; padding-right: 1.5rem;">
