@@ -55,7 +55,7 @@
   <!-- Dark Mode Toggle in Top Right Corner -->
   <span id="darkModeToggle" onclick="toggleDarkMode()" style="position: fixed; top: 1rem; right: 2rem; z-index: 1050; cursor:pointer; font-size: 1.5rem; user-select: none;">🌙</span>
   <!-- Navbar with logo -->
-  <div class="d-flex align-items-center" style="background-color: #f3f4f6; padding: 0.5rem 1.5rem 0.5rem 0.5rem;">
+  <div class="logo-bar d-flex align-items-center" style="background-color: #f3f4f6; padding: 0.5rem 1.5rem 0.5rem 0.5rem;">
     <a class="navbar-brand d-flex align-items-center p-0 m-0" href="{{ url_for('index') }}" style="height: 40px;">
       <img
         src="{{ url_for('static', filename='images/logo.png') }}"

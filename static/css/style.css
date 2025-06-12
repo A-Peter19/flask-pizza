@@ -106,5 +106,8 @@ body.dark-mode .btn-light {
 body.dark-mode .footer-divider {
   background: linear-gradient(to right, #bb86fc, #33334d) !important;
 }
+body.dark-mode .logo-bar {
+  background: #181824 !important;
+}
 
 
