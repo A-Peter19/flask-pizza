@@ -51,34 +51,23 @@
     }
   </style>
 </head>
-<body>
+<body style="margin:0; padding:0;">
   <!-- Navbar with logo -->
-  <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #f3f4f6; margin-top: 0;">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
-        <img
-          src="{{ url_for('static', filename='images/logo.png') }}"
-          alt="Site Logo"
-          height="40"
-          class="d-inline-block align-top me-2 rounded-circle"
-        >
-      </a>
-      <div class="d-flex align-items-center ms-auto">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <span id="darkModeToggle" onclick="toggleDarkMode()" style="cursor:pointer; font-size: 1.5rem; user-select: none; margin-left: 1.5rem;">🌙</span>
-      </div>
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <div class="d-flex align-items-center justify-content-between" style="background-color: #f3f4f6; padding: 0.5rem 1.5rem 0.5rem 0.5rem;">
+    <a class="navbar-brand d-flex align-items-center p-0 m-0" href="{{ url_for('index') }}" style="height: 40px;">
+      <img
+        src="{{ url_for('static', filename='images/logo.png') }}"
+        alt="Site Logo"
+        height="40"
+        class="d-inline-block align-top rounded-circle"
+      >
+    </a>
+    <span id="darkModeToggle" onclick="toggleDarkMode()" style="cursor:pointer; font-size: 1.5rem; user-select: none;">🌙</span>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #f3f4f6; margin-top: 0; padding-top: 0;">
+    <div class="container-fluid p-0">
+      <div class="collapse navbar-collapse show" id="mainNavbar" style="flex-grow:1;">
+        <ul class="navbar-nav ms-0 mb-2 mb-lg-0 d-flex flex-row align-items-center" style="width:100%;">
           <li class="nav-item mx-1">
             <a class="nav-link{% if request.endpoint=='index' %} active fw-bold{% endif %}"
                href="{{ url_for('index') }}">Home</a>
