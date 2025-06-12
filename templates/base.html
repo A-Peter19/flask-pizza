@@ -74,8 +74,24 @@
                href="{{ url_for('about') }}">About</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link{% if request.endpoint=='posts' %} active fw-bold{% endif %}"
-               href="{{ url_for('posts') }}">Posts</a>
+            <a class="nav-link{% if request.endpoint=='projects' %} active fw-bold{% endif %}"
+               href="{{ url_for('projects') }}">Projects</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='blog' %} active fw-bold{% endif %}"
+               href="{{ url_for('blog') }}">Blog</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='gallery' %} active fw-bold{% endif %}"
+               href="{{ url_for('gallery') }}">Gallery</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='achievements' %} active fw-bold{% endif %}"
+               href="{{ url_for('achievements') }}">Achievements</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link{% if request.endpoint=='contact' %} active fw-bold{% endif %}"
+               href="{{ url_for('contact') }}">Contact</a>
           </li>
           <li class="nav-item mx-1">
             <a class="nav-link{% if request.endpoint=='user' %} active fw-bold{% endif %}"

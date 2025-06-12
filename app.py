@@ -40,6 +40,26 @@ def submit():
     # otherwise show thank you page.
     return render_template('thankyou.html', name=username)
 
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/achievements')
+def achievements():
+    return render_template('achievements.html')
+
 """ @app.context_processor
 def inject_current_year():
     return {'current_year': datetime.utcnow().year} """
